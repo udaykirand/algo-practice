@@ -39,4 +39,5 @@ public class ReadInput {
         str = in.nextLine();
         return str;
     }
+
 }
