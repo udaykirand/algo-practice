@@ -2,12 +2,15 @@ package in.ukd.practice;
 
 import in.ukd.practice.utils.ReadInput;
 
+import java.util.Arrays;
+
 public class BinarySearch {
 
     public static void main(String[] args) {
-        int c, first, last, middle, n, search, array[];
+        int first, last, middle, n, search, array[];
         array = ReadInput.readIntArray();
         search = ReadInput.readInteger();
+        Arrays.sort(array);
         n = array.length;
         first = 0;
         last = n - 1;
