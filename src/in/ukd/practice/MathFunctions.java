@@ -12,6 +12,7 @@ public class MathFunctions {
         int number2 = ReadInput.readInteger();
         System.out.println("GCD of two numbers " + number1 + " and " + number2 + " is :" + findGCD(number1, number2));
         System.out.println("LCM of two numbers " + number1 + " and " + number2 + " is :" + findLcm(number1, number2));
+        System.out.println("LCM of two numbers using GCD " + number1 + " and " + number2 + " is :" + lcmWithGcd(number1, number2));
         System.out.println("HCF of two numbers " + number1 + " and " + number2 + " is :" + findHcf(number1, number2));
         int checkPrime = ReadInput.readInteger();
         System.out.println(checkPrime(checkPrime) ? checkPrime + " is a prime" : checkPrime + " isn't a prime");
@@ -33,6 +34,10 @@ public class MathFunctions {
                 return a;
             ++a;
         }
+    }
+
+    static int lcmWithGcd(int x, int y) {
+        return x * y / findGCD(x, y);
     }
 
     private static int findHcf(int x, int y) {
