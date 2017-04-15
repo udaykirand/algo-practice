@@ -13,6 +13,8 @@ public class MathFunctions {
         System.out.println("GCD of two numbers " + number1 + " and " + number2 + " is :" + findGCD(number1, number2));
         System.out.println("LCM of two numbers " + number1 + " and " + number2 + " is :" + findLcm(number1, number2));
         System.out.println("HCF of two numbers " + number1 + " and " + number2 + " is :" + findHcf(number1, number2));
+        int checkPrime = ReadInput.readInteger();
+        System.out.println(checkPrime(checkPrime) ? checkPrime + " is a prime" : checkPrime + " isn't a prime");
     }
 
     private static int findGCD(int number1, int number2) {
@@ -42,5 +44,14 @@ public class MathFunctions {
             }
         }
         return h;
+    }
+
+    private static boolean checkPrime(int x) {
+        for (int i = 2; i * i <= x; i++) {
+            if (x % i == 0) {
+                return false;
+            }
+        }
+        return true;
     }
 }
